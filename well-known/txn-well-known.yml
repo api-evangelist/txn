@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://txn.com/.well-known/*
+host: https://txn.com
+note: >-
+  txn.com no longer hosts the TXN Solutions product. As of this probe the domain
+  serves a generic "Launching Soon / under construction" page from an Alibaba Cloud
+  host (8.218.163.58) with a self-signed TLS certificate (BT Panel issuer), so
+  verified HTTPS fails; HTTPS (unverified) 301-redirects down to plain HTTP, where
+  every well-known path returns 404. No well-known discovery surface exists.
+tls:
+  verified_https: failed
+  error: self-signed certificate in certificate chain
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

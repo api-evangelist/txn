@@ -1,8 +1,26 @@
 aid: txn
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/txn.png
 name: TXN
-description: TXN is a company surfaced as a portfolio company of bloomberg-beta, slow-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: TXN (TXN Solutions, Inc.) was a San Francisco consumer spending analytics
+  company that captured transactions directly from the credit and debit cards of an
+  opt-in research panel, layering demographics and targeted surveys on top to give
+  merchants competitive intelligence and share-of-wallet insight. Founded by Alex
+  Rampell, Pasha Bitz, and Jonathan Wolf and backed by Andreessen Horowitz, Bloomberg
+  Beta, General Catalyst, Homebrew, SV Angel, and Slow Ventures, it is listed as
+  exited in the Bloomberg Beta portfolio. As of July 2026 txn.com serves only a
+  parked "Launching Soon" page on an Alibaba Cloud host with a self-signed TLS
+  certificate — no product, developer, or API surface remains.
 url: https://raw.githubusercontent.com/api-evangelist/txn/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +28,18 @@ x-backed-by:
 - bloomberg-beta
 - slow-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: portfolio-lead-defunct
+x-status: exited
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Analytics
+- Consumer Spending
+- Market Research
+- Competitive Intelligence
+- Surveys
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/txn-domain-security.yml
 - type: Website
   url: https://txn.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
